@@ -9,7 +9,7 @@ use App\Models\Currency;
 
 class Transaction extends Model
 {
-    use SoftDeletes; // ← ajoute ça
+
     protected $fillable = [
         'user_id',
         'from_currency_id',
@@ -18,7 +18,7 @@ class Transaction extends Model
         'amount_to',
         'rate',
     ];
-    protected $dates = ['deleted_at']; // optionnel si Laravel >= 7
+   
 
     public function fromCurrency()
     {
